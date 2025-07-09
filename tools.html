@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      <style>
+        body{
+          font-family: Arial, Helvetica, sans-serif;
+            background: #EFEFE7;
+            
+        }
+       
+          .navbar {
+     background-color: rgb(83, 116, 74);
+     align-content: end;
+     
+     }
+
+     .navbar-text {
+     color: white;
+     }
+
+    a:hover {
+    background-color: rgb(103, 124, 108);
+      }
+       a:link{
+    color: white;
+}
+     a:visited{
+     color:rgb(185, 185, 185);
+   }
+       
+       
+        *, ::after, ::before {
+             box-sizing: border-box;
+        }
+
+        .flip-card p{
+          margin: 30px;
+        }
+        
+        .flip-card {
+            background-color: transparent;
+            width: 400px;
+            height: 400px;
+            perspective: 1000px;
+            border-radius: 20px;
+            padding: 30px;
+            margin:30px;
+        }
+
+        .flip-card-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transition: transform 0.6s;
+        transform-style: preserve-3d;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        border-radius: 20px;
+        }
+
+        .flip-card:hover .flip-card-inner {
+        transform: rotateY(180deg);
+        }
+
+        .flip-card-front, .flip-card-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        }
+
+        .flip-card-front {
+        background-color:#AFBEA2;
+        color: black;
+        border-radius: 20px;
+        }
+
+        .flip-card-back {
+        background-color:#AFBEA2;
+        color: white;
+        transform: rotateY(180deg);
+        border-radius: 20px;
+        }
+        li, .flip-card-inner p{
+            text-align: left;
+        }
+        footer {
+        text-align: center;
+        padding: 3px;
+        background-color: rgb(83, 116, 74);
+        color: white;
+        margin-right: auto;
+        margin-left: auto;
+}
+h1{
+      text-align: center;
+}
+
+      </style>
+    <title>Tools</title>
+</head>
+<body>
+    <!-- Nav bar-->
+<nav class="navbar navbar-defult ">
+    <div class="container-fluid">
+        <!-- header -->
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">FNS</a>
+      </div>
+      <ul class="nav navbar-nav ms-auto">
+        <li><a href="HomePage.html">Home</a></li>
+
+        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Products <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="All.html">All</a></li>
+            <li class="active"><a href="#">Tools</a></li>
+             <li><a href="Electrics.html">Electronics</a></li>
+          </ul>
+
+        <li><a href="Offer.html">Offers</a></li>
+        <li><a href="cart.html">MyCart</a></li>
+        <li><a href="aboutUs.html">About us</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!--Tool cards-->
+
+    <h1>Tools</h1>
+    <div class="row">
+        <div class="card-container col-lg-4 col-md-4 col-sm-4 d-flex align-items-strech wraper">
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <h3>Vegetable chopper</h3>
+                    <img src="chopperjpg.jpg" alt="vegetable chopper picture" style="width:300px;height:250px; border-radius: 25px;">
+                  </div>
+                  <div class="flip-card-back">
+                    <h3>vegetable chopper</h3> 
+                    <p> The trusty vegetable chopper can make cutting veggies, 
+					blitzing up sauces and chopping herbs a breeze
+                    </p> 
+                    <ul>
+                        <li>Price 150$</li>
+                        <li>Size: large</li>
+                        <li>Color: White</li>
+                        <li>Guarantee: 3 years</li>
+                        <li>Made in: india</li>
+                    </ul>
+                    <a href="payy.html"><button type="button" class="btn btn-success">Buy now</button></a> 
+                    <a href="cart.html"><button type="button" class="btn btn-default">Go to cart</button></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!--Nonstick Pan-->
+
+            <div class="card-container col-lg-4 col-md-4 col-sm-4 d-flex align-items-strech wraper">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                      <div class="flip-card-front">
+                        <h3>Nonstick Pan</h3>
+                        <img src="nonstickpan.jpg" alt="Nonstick pan picture" style="width:300px;height:250px; border-radius: 25px;">
+                      </div>
+                      <div class="flip-card-back">
+                        <h3>Nonstick pan</h3> 
+                        <p>A nonstick pan is the best tool for cooking fluffy omelets, golden pancakes, 
+						and delicate fish without tadding oil. </p>
+                        <ul>
+                            <li>Price: 68$</li>
+                            <li>Size: Medium </li>
+                            <li>Color: white</li>
+                            <li>Guarantee: 2 years</li>
+                            <li>Made in: <abbr title="United States of America"> USA</abbr></li>
+                        </ul>
+                        <button class="btn btn-danger" onclick="OutOfStock()">Out of stock </button>
+                        <script>
+                          function OutOfStock(){
+                          let email;
+                          let notify=prompt("Sorry this item is out of stock, write your email and we will inform you when it will arrive!:","xxx@gmai.com");
+                          }
+
+                        </script>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!--Bambo Steamer-->
+
+                <div class="card-container col-lg-4 col-md-4 col-sm-4 d-flex align-items-strech wraper">
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                          <div class="flip-card-front">
+                            <h3> Bamboo Steamer</h3>
+                            <img src="bambo.jpg" alt=" Bamboo Steame picture" style="width:300px;height:250px; border-radius: 25px; ">
+                          </div>
+                          <div class="flip-card-back">
+                            <h3> Bamboo Steamer</h3> 
+                            <p>it is to steam fish, vegetables. and dumplings, a bamboo steamer is incredibly versatile
+                                 
+                                
+                            </p>
+                            <ul>
+                                <li>Price: 300$</li>
+                                <li>Size: Medium</li>
+                                <li>Color: brown</li>
+                                <li>Guarantee: 2 years</li>
+                                <li>Made in: china</li>
+                            </ul>
+                         <button class="btn btn-danger" onclick="OutOfStock()">Out of stock </button>
+                        <script>
+                          function OutOfStock(){
+                          let email;
+                          let notify=prompt("Sorry this item is out of stock, write your email and we will inform you when it will arrive!:","xxx@gmai.com");
+                          }
+
+                        </script>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+        </div>
+        
+        <div class="row">
+          <!--Spiralizer-->
+            <div class="card-container col-lg-4 col-md-4 col-sm-4 d-flex align-items-strech wraper">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                      <div class="flip-card-front">
+                        <h3>Spiralizer</h3>
+                            
+                        <img src="spiralizer.jpg" alt="Spiralizer picture" style="width:300px;height:250px; border-radius: 25px; ">
+                      </div>
+                      <div class="flip-card-back">
+                        <h3>Spiralizer</h3> 
+                        <p>A good spiralizer should help you effortlessly create spiralized 
+						or ribboned vegetables with ease.
+                        </p> 
+                        <ul>
+                            <li>Price 115$</li>
+                            <li>Size: small</li>
+                            <li>Color: white</li>
+                            <li>Guarantee: 4 years</li>
+                            <li>Made in: <abbr title="United States of America"> USA</abbr></li>
+                        </ul>
+                        <a href="payy.html"><button type="button" class="btn btn-success">Buy now</button></a> 
+                        <a href="cart.html"><button type="button" class="btn btn-default">Go to cart</button></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                 <!--card-->
+                 <div class="card-container col-lg-4 col-md-4 col-sm-4 d-flex align-items-strech wraper">
+                  <div class="flip-card">
+                      <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                          <h3>Salad Spinner</h3>
+                          <img src="saladSpinner.jpeg" alt=" Bamboo Steame picture" style="width:300px;height:250px; border-radius: 25px; ">
+                        </div>
+                        <div class="flip-card-back">
+                          <h3>Salad Spinner</h3> 
+                          <p> It removes the excess water from your sald and helps with cleaning and 
+                            drying the salad.
+                          </p>
+                          <ul>
+                              <li>Price: 15$</li>
+                              <li>Size: Medium </li>
+                              <li>Color: White</li>
+                              <li>Guarantee: None</li>
+                              <li>Made in: China</li>
+                          </ul>
+                          <a href="payy.html"><button type="button" class="btn btn-success">Buy now</button></a> 
+                          <a href="cart.html"><button type="button" class="btn btn-default">Go to cart</button></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!--Cutting Boraed-->
+                                <div class="card-container col-lg-4 col-md-4 col-sm-4 d-flex align-items-strech wraper">
+                                  <div class="flip-card">
+                                      <div class="flip-card-inner">
+                                        <div class="flip-card-front">
+                                          <h3>Cutting board</h3>
+                                          <img src="CuttingBoard.jpg" alt=" Bamboo Steame picture" style="width:300px;height:250px; border-radius: 25px; ">
+                                        </div>
+                                        <div class="flip-card-back">
+                                          <h3>Cutting board</h3> 
+                                          <p> It is made from natural wooden,
+                                            gentle on knives and healthier as it does not trap bacteria.
+                                              
+                                          </p>
+                                          <ul>
+                                              <li>Price: 25$</li>
+                                              <li>Size: Medium </li>
+                                              <li>Color: Wooden</li>
+                                              <li>Guarantee: None</li>
+                                              <li>Made in: Italy</li>
+                                          </ul>
+                                          <button class="btn btn-danger" onclick="OutOfStock()">Out of stock </button>
+                                          <script>
+                                            function OutOfStock(){
+                                            let email;
+                                            let notify=prompt("Sorry this item is out of stock, write your email and we will inform you when it will arrive!:","xxx@gmai.com");
+                                            }
+                                          </script>
+
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                
+                            </div>
+
+                          
+              
+
+
+    <br/>
+    <hr/>
+     <!--Footer-->
+    <footer>
+      <p>&copy; FNS COMPANY WLL.</p>
+      </footer>
+</body>
+</html>

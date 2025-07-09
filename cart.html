@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+
+<html>
+	<head lang="en">
+		
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Mycart</title>
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+				
+		<!-- jQuery library -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+		
+		<!-- Latest compiled JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+		<script type="text/javascript">
+			let counterJS = 0;
+			var discount = 0.2;
+
+			$(document).ready(function()
+			{
+				$("#1").mouseenter(function(){
+					$("#1").css({"width":"300" , "height":"300"});
+				});
+				$("#1").mouseleave(function(){
+					$("#1").css({"width":"150" , "height":"150"});
+				});
+			});
+
+			$(document).ready(function()
+			{
+				$("#2").mouseenter(function(){
+					$("#2").css({"width":"300" , "height":"300"});
+				});
+				$("#2").mouseleave(function(){
+					$("#2").css({"width":"150" , "height":"150"});
+				});
+			});
+
+			$(document).ready(function()
+			{
+				$("#3").mouseenter(function(){
+					$("#3").css({"width":"300" , "height":"300"});
+				});
+				$("#3").mouseleave(function(){
+					$("#3").css({"width":"150" , "height":"150"});
+				});
+			});
+
+			$(document).ready(function()
+			{
+				$("#4").mouseenter(function(){
+					$("#4").css({"width":"300" , "height":"300"});
+				});
+				$("#4").mouseleave(function(){
+					$("#4").css({"width":"150" , "height":"150"});
+				});
+			});
+
+			$(document).ready(function()
+			{
+				$("#5").mouseenter(function(){
+					$("#5").css({"width":"300" , "height":"300"});
+				});
+				$("#5").mouseleave(function(){
+					$("#5").css({"width":"150" , "height":"150"});
+				});
+			});
+
+			$(document).ready(function()
+			{
+				$("#6").mouseenter(function(){
+					$("#6").css({"width":"300" , "height":"300"});
+				});
+				$("#6").mouseleave(function(){
+					$("#6").css({"width":"150" , "height":"150"});
+				});
+			});
+		</script>
+		
+		
+		<style>
+			
+			html{
+			width: 100%;
+			height: 100%;
+			}
+			
+			body{
+			width: 100%;
+			min-height: 100%;
+			align-items: center;
+			font-family: Arial, Helvetica, sans-serif;
+					}
+			.navbar {
+              background-color: rgb(83, 116, 74);
+              
+            }
+
+           .navbar-text {
+            color: white;
+           }
+
+            a:hover {
+        	background-color: rgb(103, 124, 108);
+           }
+            a:link{
+            color: white;
+             }
+           	a:visited{
+            color:rgb(185, 185, 185);
+            }
+			footer {
+			text-align: center;
+			padding: 3px;
+			background-color: rgb(83, 116, 74);
+			color: white;
+			margin-right: auto;
+			margin-left: auto;
+			}
+			table{
+			margin: auto;
+			margin-right: 15px;
+			margin-left: 15px;
+			margin-bottom: 0;
+			text-align: center;
+			border-collapse: collapse;
+			border: solid 2px rgb(83, 116, 74);
+		
+			}
+			table tr td{
+			padding: 30px;
+			}
+			#tabelHead{
+			background-color: rgb(83, 116, 74);
+			color: white;
+			font-weight: bold;
+			}
+			.quantity{
+			border: solid 1px black;
+			width:50px;
+			height: 30px;
+			text-align: center;
+			position: center;
+			}
+			.col2{
+			width: 250px;
+			align-items: center; 
+			justify-content: left;
+			}
+			.increamentBtn {
+			width: 30px;
+			height: 30px;
+			padding: 0px;
+			}
+			.decrementBtn{
+			width: 30px;
+			height: 30px;
+			padding: 0px;
+			}
+			.amontDivs{
+			display: inline-table;
+			}
+			#rightDiv{
+			margin-left: 83px;
+			margin-right: 0px;
+			width: 120px;
+			text-align: right;
+			}
+			#container{
+			display: flex;
+			margin-top: 50px;
+			margin-bottom: 5px;
+			margin-left:  25px;
+			margin-right: 25px;
+			}
+			.fns{
+			width: 150px;
+			height: 150px;
+			float: left;
+			margin-right: 10px;
+			}
+			.controlsBtn .quantity{
+		    position: center;
+		  	margin: 30px;
+		  	align-items: center;
+			}
+            th{
+                background-color:rgb(83, 116, 74) ;
+                color:white;
+                text-align: center;
+                justify-content: space-between;
+                font-size: 20px;
+            }
+			#payBtn{
+				background-color: rgb(127, 163, 135);;
+				color: white;
+				cursor: pointer;
+				font-size: 2.5rem;
+				align-items: center;
+				height: 80px;
+				width: 30%;
+				margin-bottom: 10px;
+			
+			}
+			h1{
+				text-align: center;
+				color:rgb(83, 116, 74) ;
+			}
+
+		</style>
+
+</head>
+
+<body>
+	<!-- Nav bar-->
+		<nav class="navbar navbar-defult ">
+			<div class="container-fluid">
+	<!-- header -->
+			<div class="navbar-header">
+				<a class="navbar-brand" href="#">FNS</a>
+			</div>
+			<ul class="nav navbar-nav ms-auto">
+				<li><a href="HomePage.html">Home</a></li>
+
+				<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Products <span class="caret"></span></a>
+				<ul class="dropdown-menu">
+					<li><a href="All.html">All</a></li>
+					<li><a href="tools.html">Tools</a></li>
+					<li><a href="Electrics.html">Electronics</a></li>
+				</ul>
+
+				<li><a href="Offer.html">Offers</a></li>
+				<li class="active"><a href="#">MyCart</a></li>
+				<li><a href="aboutUs.html">About us</a></li>
+			</ul>
+			</div>
+		</nav>
+
+		<h1>My Shopping Cart</h1>
+	
+		
+		<!--Cart table-->
+			<div id="container">
+				<table class="table" >
+                    <!-- table header -->
+					<tr id="tabelHead"> 
+						<th>Product</th>
+						<th class="col2">Quantity</th>
+						<th>Total</th>
+					</tr>
+					<!--Product1 Steamer-->
+					<tr> 
+						<td>
+							<figure>
+								<img src="airfryer.jpg" alt="Modern Furniture Style" class="fns" id="1">
+								<figcaption>
+									<h4> Steamer</h4>
+									
+								</figcaption>
+							<figure>
+						</td>
+						<td class="col2">
+							<div class="controlsBtn">
+								<button class="increamentBtn">+</button>
+								<label class="quantity">0</label>
+								<button class="decrementBtn">-</button>
+							</div>
+						</td>
+						<td style="width: 400px;">$ <span id="p1">0.00</span></td>
+						<script>
+							var incrementBtn1 = document.getElementsByClassName("increamentBtn")[0];
+							incrementBtn1.addEventListener("click", addQ1);
+							//variabels decleration
+							let p1Q = 0;
+							let p2Q = 0;
+							let p3Q = 0;
+							let p4Q = 0;
+							let p5Q = 0;
+							let p6Q = 0;
+							let counter = 0;
+							let p1Total = 0;
+							var p1priceLbl = document.getElementById("p1");
+							var quantityLbl1 = document.getElementsByClassName("quantity")[0];
+							let originalTot = 0;
+                            
+							//add function
+							function addQ1(){
+								p1Q++;		
+
+                                console.log('before p1q',p1Q)	
+                                console.log('before counter',counter)		
+	
+								increaseQuantity();
+								product1total();								
+								quantityLbl1.innerHTML = counter;
+								p1priceLbl.innerHTML = p1Total.toFixed(2);
+							}
+							//total product1 function
+							function product1total(){
+								p1Total = p1Q*160;
+							}
+							// increment quantity function
+							function increaseQuantity(){
+								counter++;
+							}
+
+                            console.log('after p1q',p1Q)
+                            console.log('after counter',counter)	
+                            
+							var decrementBtn1 = document.getElementsByClassName("decrementBtn")[0];
+							decrementBtn1.addEventListener("click", decreaseQ2);
+							//decrerse function			
+							function decreaseQ2(){
+								if(p1Q>0){
+									p1Q--;				
+									decreaseCounter();
+									product1total();									
+									quantityLbl1.innerHTML =counter;
+									p1priceLbl.innerHTML = p1Total.toFixed(2);
+								} else {
+									p1Q = 0;
+								}
+							}
+							//decrement quantity function
+							function decreaseCounter(){
+								counter--;
+							}
+						</script>
+					</tr>
+				
+					<!--product 2: rice cooker-->
+					<tr> 
+						<td style="width: 45%;">
+								<img src="riceCooker.jpg" alt="Modern Furniture Style" class="fns" id="2">
+									<h4>Rice Cooker</h4>
+						</td>
+						<td class="col2">
+							
+							<div class="controlsBtn">
+								<button class="increamentBtn">+</button>						
+								<label class="quantity">0</label>
+								<button class="decrementBtn">-</button>
+							</div>
+						</td>
+						<td style="width: 400px;">$ <span id="p2">0.00</span></td>
+						
+						<script>
+				
+				var incrementBtn2 = document.getElementsByClassName("increamentBtn")[1];
+							incrementBtn2.addEventListener("click", addQ2);
+							
+							let p2Total = 0;
+							var p2PriceLbl = document.getElementById("p2");
+							var quantityLbl2 = document.getElementsByClassName("quantity")[1];
+								
+							function addQ2(){
+								p2Q++;				
+
+                                console.log('before p2q',p2Q)	
+                                console.log('before counter',counter)	
+
+								increaseQuantity();
+								product2total();								
+								// quantityLbl2.innerHTML = counter;
+                                quantityLbl2.innerHTML = p2Q;
+								p2PriceLbl.innerHTML = p2Total.toFixed(2);
+							}
+							function product2total(){
+								p2Total = p2Q*55;
+							}
+							function increaseQuantity(){
+								counter++;
+							}
+
+                            console.log('after p2q',p2Q)	
+                                console.log('after counter',counter)	
+							var decrementBtn2 = document.getElementsByClassName("decrementBtn")[1];
+							decrementBtn2.addEventListener("click", decreaseQ2);
+											
+							function decreaseQ2(){
+								if(p2Q>0){
+									p2Q--;				
+									decreaseCounter();
+									product2total();									
+                                    quantityLbl2.innerHTML = p2Q;
+									p2PriceLbl.innerHTML = p2Total.toFixed(2);
+								} else {
+									p2Q = 0;
+								}
+							}
+							
+							function decreaseCounter(){
+								counter--;
+							}
+						</script>
+					</tr>
+
+					<!--product 3: spiralizer-->
+
+					<tr> 
+						<td style="width: 45%;">
+						<figure>
+								<img src="spiralizer.jpg" alt="spiralizer picture" class="fns" id="3">
+									<h4>Spiralizer</h4>				
+						</td>
+						<td class="col2">
+							<div class="controlsBtn">
+								<button class="increamentBtn">+</button>						
+								<label class="quantity">0</label>
+								<button class="decrementBtn">-</button>
+							</div>
+						</td>
+						<td style="width: 400px;">$ <span id="p3">0.00</span></td>
+						<script>
+							var incrementBtn3 = document.getElementsByClassName("increamentBtn")[2];
+							incrementBtn3.addEventListener("click", addQ3);
+							
+							let p3Total = 0;
+							var p3PriceLbl = document.getElementById("p3");
+							var quantityLbl3 = document.getElementsByClassName("quantity")[2];
+								
+							function addQ3(){
+								p3Q++;				
+
+                                console.log('before p2q',p3Q)	
+                                console.log('before counter',counter)	
+
+								increaseQuantity();
+								product3total();								
+								
+                                quantityLbl3.innerHTML = p3Q;
+								p3PriceLbl.innerHTML = p3Total.toFixed(2);
+							}
+							function product3total(){
+								p3Total = p3Q*34;
+							}
+							function increaseQuantity(){
+								counter++;
+							}
+
+                            console.log('after p3q',p3Q)	
+                           console.log('after counter',counter)	
+							var decrementBtn3 = document.getElementsByClassName("decrementBtn")[2];
+							decrementBtn3.addEventListener("click", decreaseQ3);
+											
+							function decreaseQ3(){
+								if(p3Q>0){
+									p3Q--;				
+									decreaseCounter();
+									product3total();									
+								
+                                    quantityLbl3.innerHTML = p3Q;
+									p3PriceLbl.innerHTML = p3Total.toFixed(2);
+								} else {
+									p3Q = 0;
+								}
+							}
+							
+							function decreaseCounter(){
+								counter--;
+							}
+						
+						</script>
+					</tr>
+
+					<!--product 4-->
+
+					<tr> 
+						<td style="width: 45%;">
+							<img src="chopperjpg.jpg" alt="Modern Furniture Style" class="fns" id="4">
+								<h4> vegetables Chopper</h4>
+						</td>
+						<td class="col2">
+							<div class="controlsBtn">
+								<button class="increamentBtn">+</button>						
+								<label class="quantity">0</label>
+								<button class="decrementBtn">-</button>
+							</div>
+						</td>
+						<td style="width: 400px;">$ <span id="p4">0.00</span></td>
+						<script>				
+							var incrementBtn4 = document.getElementsByClassName("increamentBtn")[3];
+								incrementBtn4.addEventListener("click", addQ4);
+														
+								let p4Total = 0;
+								var p4PriceLbl = document.getElementById("p4");
+								var quantityLbl4 = document.getElementsByClassName("quantity")[3];
+								
+								function addQ4(){
+									p4Q++;              
+								
+									console.log('before p4q',p4Q)  
+									console.log('before counter',counter)  
+								
+									increaseQuantity();
+									product4total();                                
+									
+									quantityLbl4.innerHTML = p4Q;
+									p4PriceLbl.innerHTML = p4Total.toFixed(2);
+								}
+								function product4total(){
+									p4Total = p4Q*33;
+								}
+								function increaseQuantity(){
+									counter++;
+								}
+								
+								console.log('after p4q',p4Q)    
+									console.log('after counter',counter)    
+								var decrementBtn4 = document.getElementsByClassName("decrementBtn")[3];
+								decrementBtn4.addEventListener("click", decreaseQ4);
+											
+								function decreaseQ4(){
+									if(p4Q>0){
+										p4Q--;              
+										decreaseCounter();
+										product4total();                                    
+										quantityLbl4.innerHTML = p4Q;
+										p4PriceLbl.innerHTML = p4Total.toFixed(2);
+									} else {
+										p4Q = 0;
+									}
+								}
+								
+									function decreaseCounter(){
+										counter--;
+									}
+						
+						</script>
+					</tr>
+
+					<!--product 5-->
+
+					<tr> 
+						<td style="width: 45%;">
+								<img src="saladSpinner.jpeg" alt="Salad spinner picture" class="fns" id="5">
+									<h4>Salad Spinner</h4>
+						</td>
+						<td class="col2">
+							<div class="controlsBtn">
+								<button class="increamentBtn">+</button>						
+								<label class="quantity">0</label>
+								<button class="decrementBtn">-</button>
+							</div>
+						</td>
+						<td style="width: 400px;">$ <span id="p5">0.00</span></td>
+						<script>
+				var incrementBtn5 = document.getElementsByClassName("increamentBtn")[4];
+							incrementBtn5.addEventListener("click", addQ5);
+													
+							let p5Total = 0;
+							var p5PriceLbl = document.getElementById("p5");
+							var quantityLbl5 = document.getElementsByClassName("quantity")[4];
+							
+							function addQ5(){
+								p5Q++;              
+							
+								console.log('before p5q',p5Q)  
+								console.log('before counter',counter)  
+							
+								increaseQuantity();
+								product5total();                                
+								quantityLbl5.innerHTML = p5Q;
+								p5PriceLbl.innerHTML = p5Total.toFixed(2);
+							}
+							function product5total(){
+								p5Total = p5Q*15;
+							}
+							function increaseQuantity(){
+								counter++;
+							}
+							
+							    console.log('after p5q',p5Q)    
+								console.log('after counter',counter)    
+							var decrementBtn5 = document.getElementsByClassName("decrementBtn")[4];
+							decrementBtn5.addEventListener("click", decreaseQ5);
+										
+							function decreaseQ5(){
+								if(p5Q>0){
+									p5Q--;              
+									decreaseCounter();
+									product5total();                                   
+									quantityLbl5.innerHTML = p5Q;
+									p5PriceLbl.innerHTML = p5Total.toFixed(2);
+								} else {
+									p5Q = 0;
+								}
+							}
+							
+							function decreaseCounter(){
+								counter--;
+							}
+							
+							
+						
+						</script>
+					</tr>
+
+					<!--product 6-->
+						
+					<tr> 
+						<td style="width: 45%;">
+								<img src="Blender.jpg" alt="Blender" class="fns" id="6">
+									<h4>Blender</h4>
+						</td>
+						<td class="col2">
+							<div class="controlsBtn">
+								<button class="increamentBtn">+</button>						
+								<label class="quantity">0</label>
+								<button class="decrementBtn">-</button>
+							</div>
+						</td>
+						<td style="width: 400px;">$ <span id="p6">0.00</span></td>
+						
+						<script>
+							var incrementBtn6 = document.getElementsByClassName("increamentBtn")[5];
+				incrementBtn6.addEventListener("click", addQ6);
+										
+				let p6Total = 0;
+				var p6PriceLbl = document.getElementById("p6");
+				var quantityLbl6 = document.getElementsByClassName("quantity")[5];
+				
+				function addQ6(){
+					p6Q++;              
+				
+					console.log('before p6q',p6Q)  
+					console.log('before counter',counter)  
+				
+					increaseQuantity();
+					product6total();                                
+					quantityLbl6.innerHTML = p6Q;
+					p6PriceLbl.innerHTML = p6Total.toFixed(2);
+				}
+				function product6total(){
+					p6Total = p6Q*115;
+				}
+				function increaseQuantity(){
+					counter++;
+				}
+				
+				console.log('after p6q',p6Q)    
+					console.log('after counter',counter)    
+				var decrementBtn6 = document.getElementsByClassName("decrementBtn")[5];
+				decrementBtn6.addEventListener("click", decreaseQ6);
+							
+				function decreaseQ6(){
+					if(p6Q>0){
+						p6Q--;              
+						decreaseCounter();
+						product6total();                                    
+						quantityLbl6.innerHTML = p6Q;
+						p6PriceLbl.innerHTML = p6Total.toFixed(2);
+					} else {
+						p6Q = 0;
+					}
+				}
+				
+				function decreaseCounter(){
+					counter--;
+				}
+								
+						</script>
+					</tr>
+				<hr>
+				<hr>
+
+					<!--total amount -->
+
+				
+          <td colspan="3">
+           
+              <div class="amontDivs">
+                <label> Your Total Price: </label>
+                <br>
+              </div>
+              
+              <div class="amontDivs" id="rightDiv">
+                <label>$ <span id="originalTot">0.00</span></label>
+                <br>
+                <button class="btn btn-success" id="cal" >Show My Total</button>
+				
+              </div>
+
+              <script>
+                var calcButton = document.getElementById("cal");
+                calcButton.addEventListener("click",calculate);
+                
+                function calculate(){
+                  if(p1Q != 0 || p2Q != 0 || pq3 != 0|| p4Q!=0 || p5!=0|| p6!=0){
+                    var originalTot = document.getElementById("originalTot");
+                    var Total = document.getElementById("Total");
+					var originalTotalAmount = parseInt(p1.innerHTML) + parseInt(p2Total) + parseInt(p3Total)+ parseInt(p4Total) + parseInt(p5Total) + parseInt(p6Total);
+                    originalTot.innerHTML = originalTotalAmount.toFixed(2);
+                    
+                  }
+                }
+              </script>
+              
+            
+          </td>
+        </tr>
+        </table>
+			</div>
+			<!--Pay button-->
+	<center><a href="payy.html"><button type="button" id="payBtn">Proceed to pay </button></a></center>
+			  <!--Footer-->
+		<footer>
+			<p>&copy; FNS COMPANY WLL.</p>
+		</footer>
+	</body>
+</html>

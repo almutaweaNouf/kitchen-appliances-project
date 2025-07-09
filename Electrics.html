@@ -1,0 +1,334 @@
+
+<html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+      
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style> 
+      body{
+        font-family: Arial, Helvetica, sans-serif;
+          background: #EFEFE7;
+      }
+        
+      
+   .navbar {
+   background-color: rgb(83, 116, 74);
+   align-content: end;
+   
+   }
+
+   .navbar-text {
+   color: white;
+   }
+
+  a:hover {
+  background-color: rgb(103, 124, 108);
+    }
+     a:link{
+  color: white;
+}
+   a:visited{
+   color:rgb(185, 185, 185);
+ }
+      
+      }
+      *, ::after, ::before {
+           box-sizing: border-box;
+      }
+
+      .flip-card p{
+        margin: 30px;
+      }
+      
+      .flip-card {
+          background-color: transparent;
+          width: 400px;
+          height: 400px;
+          perspective: 1000px;
+          border-radius: 20px;
+          padding: 30px;
+          margin:30px;
+      }
+
+      .flip-card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      transition: transform 0.6s;
+      transform-style: preserve-3d;
+      box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+      border-radius: 20px;
+      }
+
+      .flip-card:hover .flip-card-inner {
+      transform: rotateY(180deg);
+      }
+
+      .flip-card-front, .flip-card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      }
+
+      .flip-card-front {
+      background-color:#AFBEA2;
+      color: black;
+      border-radius: 20px;
+      }
+
+      .flip-card-back {
+      background-color:#AFBEA2;
+      color: white;
+      transform: rotateY(180deg);
+      border-radius: 20px;
+      }
+      li,.flip-card-inner p{
+          text-align: left;
+      }
+      footer {
+      text-align: center;
+      padding: 3px;
+      background-color: rgb(83, 116, 74);
+      color: white;
+      margin-right: auto;
+      margin-left: auto;
+}
+      h1{
+            text-align: center;
+      }
+
+    </style>
+  <title>Electronics</title>
+</head>
+<body>
+  <!-- Nav bar-->
+<nav class="navbar navbar-defult ">
+  <div class="container-fluid">
+      <!-- header -->
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">FNS</a>
+    </div>
+    <ul class="nav navbar-nav ms-auto">
+      <li><a href="HomePage.html">Home</a></li>
+
+      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Products <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="All.html">All</a></li>
+          <li><a href="tools.html">Tools</a></li>
+          <li class="active"><a href="#">Electronics</a></li>
+        </ul>
+
+      </li><li><a href="Offer.html">Offers</a></li>
+      <li><a href="cart.html">MyCart</a></li>
+      <li><a href="aboutUs.html">About us</a></li>
+    </ul>
+  </div>
+</nav>
+  <h1>Electronics</h1>
+  <div class="row">
+    <!--Airfryer-->
+      <div class="card-container col-lg-4 col-md-4 col-sm-4 d-flex align-items-strech wraper">
+          <div class="flip-card">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <h3>Airfryer</h3>
+                  <img src="airfryer.jpg" alt="Airfryer picture" style="width:300px;height:250px; border-radius: 25px;">
+                </div>
+                <div class="flip-card-back">
+                  <h3>Airfryer</h3> 
+                  <p> About airfryer: it cooks chicken, meat, and fries with no oil needed at all.
+                       it is a good alternative for the oven.
+                  </p> 
+                  <ul>
+                      <li>Price 200$</li>
+                      <li>Size: Medium</li>
+                      <li>Color: White</li>
+                      <li>Guarantee: 2.5 years</li>
+                      <li>Made in: <abbr title="United States of America"> USA</abbr></li>
+                  </ul>
+                  <a href="payy.html"><button type="button" class="btn btn-success">Buy now</button></a>
+                  <a href="cart.html"><button type="button" class="btn btn-default">Go to cart</button></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!--Steamer-->
+
+          <div class="card-container col-lg-4 col-md-4 col-sm-4 d-flex align-items-strech wraper">
+              <div class="flip-card">
+                  <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                      <h3>Steamer</h3>
+                      <img src="steamer.jpg" alt="Avatar" style="width:300px;height:250px; border-radius: 25px;">
+                    </div>
+                    <div class="flip-card-back">
+                      <h3>Steamer</h3> 
+                      <p>About steamer: it steams shrimp, chicken, vegetables, and eggs with only water and have 
+                      optipns for each food type. </p>
+                      <ul>
+                          <li>Price: 115$</li>
+                          <li>Size: Medium </li>
+                          <li>Color: Pink</li>
+                          <li>Guarantee: 2 years</li>
+                          <li>Made in: China</li>
+                      </ul>
+                      <button class="btn btn-danger" onclick="OutOfStock()">Out of stock </button>
+                      <script>
+                         function OutOfStock(){
+                          let email;
+                          let notify=prompt("Sorry this item is out of stock, write your email and we will inform you when it will arrive!:","xxx@gmai.com");
+                        }
+
+                      </script>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!--Rice cooker-->
+
+              <div class="card-container col-lg-4 col-md-4 col-sm-4 d-flex align-items-strech wraper">
+                  <div class="flip-card">
+                      <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                          <h3>Rice Cooker</h3>
+                          <img src="riceCooker.jpg" alt="Avatar" style="width:300px;height:250px; border-radius: 25px; ">
+                        </div>
+                        <div class="flip-card-back">
+                          <h3>Rice Cooker</h3> 
+                          <p>About rice cooker:it cooks both white and brown rice and cooks automaticlly.
+                               
+                              
+                          </p>
+                          <ul>
+                              <li>Price: 55$</li>
+                              <li>Size: Small</li>
+                              <li>Color: White</li>
+                              <li>Guarantee: 1 years</li>
+                              <li>Made in: Japan</li>
+                          </ul>
+                          <a href="payy.html"><button type="button" class="btn btn-success">Buy now</button></a>
+                          <a href="cart.html"><button type="button" class="btn btn-default">Go to cart</button></a>
+                           </div>
+                      </div>
+                    </div>
+                  </div>
+      </div>
+      
+      <div class="row">
+        <!--Pressure cooker-->
+          <div class="card-container col-lg-4 col-md-4 col-sm-4 d-flex align-items-strech wraper">
+              <div class="flip-card">
+                  <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                      <h3>Pressure Cooker</h3>
+                          
+                      <img src="pressureCooker.png" alt="Pressure Cooker picture" style="width:300px;height:250px; border-radius: 25px; ">
+                    </div>
+                    <div class="flip-card-back">
+                      <h3>Pressure Cooker</h3> 
+                      <p>about pressure cooker: it cooks rice, soup, meat,and vegetables faster than
+                          normal cooker and needs less oil.
+                      </p> 
+                      <ul>
+                          <li>Price 350$</li>
+                          <li>Size: Larg</li>
+                          <li>Color: black</li>
+                          <li>Guarantee: 4 years</li>
+                          <li>Made in: China</li>
+                      </ul>
+                      <button class="btn btn-danger" onclick="OutOfStock()">Out of stock </button>
+                      <script>
+                          function OutOfStock(){
+                          let email;
+                          let notify=prompt("Sorry this item is out of stock, write your email and we will inform you when it will arrive!:","xxx@gmai.com");
+                        }
+
+                      </script>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!--Blender-->
+              <div class="card-container col-lg-4 col-md-4 col-sm-4 d-flex align-items-strech wraper">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                      <div class="flip-card-front">
+                        <h3>Blender</h3>
+                            
+                        <img src="Blender.jpg" alt="Blender picture" style="width:300px;height:250px; border-radius: 25px; ">
+                      </div>
+                      <div class="flip-card-back">
+                        <h3>Blender</h3> 
+                        <p>One of the best Blender and squeezes a lot of things.
+                        </p> 
+                        <ul>
+                            <li>Price 115$</li>
+                            <li>Size: large</li>
+                            <li>Color: black</li>
+                            <li>Guarantee: 5 years</li>
+                            <li>Made in: <abbr title="United States of America"> USA</abbr></li>
+                        </ul>
+                        <a href="payy.html"><button type="button" class="btn btn-success">Buy now</button></a>
+                        <a href="cart.html"><button type="button" class="btn btn-default">Go to cart</button></a> 
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                 <!--Griller-->
+                 <div class="card-container col-lg-4 col-md-4 col-sm-4 d-flex align-items-strech wraper">
+                  <div class="flip-card">
+                      <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                          <h3>Griller</h3>
+                              
+                          <img src="griller.jpg" alt="Griller picture" style="width:300px;height:250px; border-radius: 25px; ">
+                        </div>
+                        <div class="flip-card-back">
+                          <h3>Griller</h3> 
+                          <p> Used to roast meat and vegetables over direct heat and
+              it is one of the best Electronics available.
+                          </p> 
+                          <ul>
+                            <li>Price 207$</li>
+                            <li>Size: small</li>
+                            <li>Color: black</li>
+                            <li>Guarantee: 3 years</li>
+                            <li>Made in: <abbr title="United States of America"> USA</abbr></li>
+                        </ul>
+                        <button class="btn btn-danger" onclick="OutOfStock()">Out of stock </button>
+                          <script>
+                            function OutOfStock(){
+                            let email;
+                            let notify=prompt("Sorry this item is out of stock, write your email and we will inform you when it will arrive!:","xxx@gmai.com");
+                            }
+
+                      </script>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+      </div>
+
+
+  <br>
+  <hr>
+
+   <!--Footer-->
+  <footer>
+    <p>© FNS COMPANY WLL.</p>
+    </footer>
+
+</body></html>

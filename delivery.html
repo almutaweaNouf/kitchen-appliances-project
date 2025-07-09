@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Delivery</title>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<style>
+body {
+font-family: Arial, sans-serif;
+ background-color: #f2f2f2;
+ margin: 0;
+ padding: 0;
+ }
+ .container {
+ max-width: 400px;
+ margin: 50px auto;
+ background-color: white;
+ border-radius: 5px;
+ padding: 20px;
+ box-sizing: border-box;
+ 
+ }
+ h2 {
+ text-align: center;
+ margin-bottom: 20px;
+ }
+ .form-group {
+ margin-bottom: 18px;
+ }
+ .form-group label {
+ display: block;
+ font-weight: bold;
+ margin-bottom: 5px;
+ }
+ .form-group input {
+ width: 100%;
+ padding: 10px;
+ border: 1px solid #ccc;
+ border-radius: 3px;
+ box-sizing: border-box;
+ }
+ .form-group input[type="submit"] {
+ background-color: rgb(127, 163, 135);;
+ color: white;
+ cursor: pointer;
+ font-size: 1rem;
+ }
+ #deliveryBtn{
+        background-color: rgb(127, 163, 135);;
+        color: white;
+        cursor: pointer;
+        font-size: 2rem;
+        align-items: center;
+        height: 40px;
+        width: 80%;
+        position:relative;
+ 
+ }
+ 
+ </style>
+
+</head>
+<body>
+ <div class="container">
+ <h2>Delivery Form</h2>
+ <form name="myForm" class="delivery-form">
+ <div class="form-group">
+ <label for="name"> Name</label>
+ <input type="text" id="name" name="Name" required  pattern="[A-Za-z]*">
+ </div>
+ <div class="form-group">
+ <label for="email">Email </label>
+ <input type="email" id="email" name="email" required>
+ </div>
+ <div class="form-group">
+ <label for="phone">phone</label>
+ <input type="phone" id="phone" name="phone" maxlength="8" pattern="[0-9]*" >
+ </div>
+ <div class="form-group">
+ <label for="data">Prefered date</label>
+ <input type="date" id="data" name="date" required>
+ </div>
+ 
+ <div class="form-group">
+ <label for="message">Address:</label>
+ <textarea id="message" name="message"></textarea>
+ </div>
+ <br><br>
+ <div class="form-group">
+
+ <center><a href ="HomePage.html"><button id="deliveryBtn"onclick="payFanc()">Submit</button></a></center>
+<script>
+function payFanc() {
+  alert("Thank you for your shopping!");
+}
+
+</script>
+ 
+ </div>
+ </form>
+ </div>
+</body>
+
+</html>
